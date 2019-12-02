@@ -1,11 +1,11 @@
-package StrToInt1
+package convert
 
 import (
 	"errors"
 	"testing"
 )
 
-func TestMystr (t *testing.T){
+func Test_bySscanf(t *testing.T){
 	var tests = []struct{
 		input string
 		n int
@@ -25,10 +25,13 @@ func TestMystr (t *testing.T){
 		{"世界", 0, errors.New( "Not correct input.")},
 	}
 	for _,test :=range tests{
-		if num, got := MyStrToInt1(test.input); got != test.want {
+		if num, got := convSScanf(test.input); got != test.want {
 			if num !=test.n {
-				t.Errorf("myStrToInt(%q) = %v", test.input, num)
+				t.Errorf("convSScanf(%q) = %v", test.input, num)
 			}
 		}
 	}
 }
+
+//(base) MacBook-Air-Sasha:convert sashavorobyova$ go test sscanf_test.go sscanf_conv.go
+//ok      command-line-arguments  0.013s
