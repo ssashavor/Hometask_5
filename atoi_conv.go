@@ -6,9 +6,6 @@ import (
 	"strconv"
 )
 
-func convAtoi(s string) (int,error) {
-	if _, err := strconv.Atoi(s); err != nil {
-		return 0, fmt.Errorf("Not correct input.")
-	}
+func convAtoi(s string) (int, error) {
 	return strconv.Atoi(s)
 }
