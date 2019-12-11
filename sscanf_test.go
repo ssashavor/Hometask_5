@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_bySscanf(t *testing.T){
+func TestBySscanf(t *testing.T){
 	var tests = []struct{
 		input string
 		n int
