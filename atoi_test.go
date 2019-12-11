@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test_byAtoi (t *testing.T){
+func TestByAtoi (t *testing.T){
 	var tests = []struct{
 		input string
 		n int
