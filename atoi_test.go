@@ -15,14 +15,14 @@ func Test_byAtoi (t *testing.T){
 		{"543725638", 543725638, nil},
 		{"-6", -6, nil},
 		{"0", 0, nil},
-		{"0.0", 0, errors.New( "Not correct input.")},
-		{"2.1", 0, errors.New( "Not correct input.")},
-		{".1", 0, errors.New( "Not correct input.")},
-		{"2a", 0, errors.New( "Not correct input.")},
-		{"", 0, errors.New( "Not correct input.")},
-		{"  ", 0, errors.New( "Not correct input.")},
-		{"hello", 0, errors.New( "Not correct input.")},
-		{"世界", 0, errors.New( "Not correct input.")},
+		{"0.0", 0, errors.New( "invalid syntax")},
+		{"2.1", 0, errors.New( "invalid syntax")},
+		{".1", 0, errors.New( "invalid syntax")},
+		{"2a", 0, errors.New( "invalid syntax")},
+		{"", 0, errors.New( "invalid syntax")},
+		{"  ", 0, errors.New( "invalid syntax")},
+		{"hello", 0, errors.New( "invalid syntax")},
+		{"世界", 0, errors.New( "invalid syntax")},
 	}
 	for _,test :=range tests{
 		if num, got := convAtoi(test.input); got != test.want {
